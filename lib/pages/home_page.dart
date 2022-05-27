@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:namozni_organaman/pages/duolar.dart';
 import 'package:namozni_organaman/pages/forMen.dart';
 import 'package:namozni_organaman/pages/forWomen.dart';
+import 'package:namozni_organaman/pages/maruzalar.dart';
 import 'package:namozni_organaman/pages/namoz_time.dart';
 import 'package:namozni_organaman/pages/strings.dart';
 import 'package:namozni_organaman/pages/tasbeh.dart';
-import 'package:namozni_organaman/pages/youtubeplayer.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,9 +19,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-  Color maincolor=Color(0xFF007437);
-  Color screencolor=Color(0xFF0C8744);
+  Color maincolor = Color(0xFF007437);
+  Color screencolor = Color(0xFF0C8744);
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +28,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ForVideo(
-
-                      name: "LOREM", title: "KZYLWbkRpZg", about: "Ipsum"),
-                ),
-              );
-            },
+            onPressed: () {},
             icon: Icon(
               Icons.info,
               color: Colors.white,
@@ -50,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: Color(0xFF0C8744),
       body: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+        padding: const EdgeInsets.only(top: 20, left: 15, right: 15,bottom: 20),
         child: CustomScrollView(
           slivers: [
             SliverGrid(
@@ -60,48 +51,55 @@ class _HomePageState extends State<HomePage> {
                     aspectRatio: 1,
                     child: GestureDetector(
                       onTap: () {
-                        if (index ==0) {
+                        if (index == 0) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => WebViewExample(),
                             ),
                           );
-                        }else if(index==1){
+                        } else if (index == 1) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => Duolar(),
                             ),
                           );
-                        }else if(index==2){
+                        } else if (index == 2) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => ForMen(),
                             ),
                           );
-                        }else if(index==3){
+                        } else if (index == 3) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => ForWomen(),
                             ),
                           );
-                        }else if(index==4){
+                        } else if (index == 4) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => Tasbeh(),
                             ),
                           );
+                        }else if (index == 5) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MaruzalarPage(),
+                            ),
+                          );
                         }
-
                       },
                       child: Stack(
                         children: [
                           Container(
                             decoration: BoxDecoration(
+                              color: Color(0xFF087232),
                               borderRadius: BorderRadius.circular(20),
                               image: DecorationImage(
                                   image: AssetImage(
@@ -112,28 +110,33 @@ class _HomePageState extends State<HomePage> {
 
                             // color: Colors.teal[100 * (index % 9)],
                           ),
-                          // Column(
-                          //   mainAxisAlignment: MainAxisAlignment.end,
-                          //   crossAxisAlignment: CrossAxisAlignment.center,
-                          //   children: [
-                          //     Row(
-                          //       mainAxisAlignment: MainAxisAlignment.end,
-                          //       children: [
-                          //         Container(
-                          //           color: Colors.black.withOpacity(0.4),
-                          //           padding: EdgeInsets.only(left: 8, right: 8),
-                          //           child: Text(
-                          //             "lorem ipsum",
-                          //             style: TextStyle(
-                          //               color: Colors.white,
-                          //               fontWeight: FontWeight.bold,
-                          //             ),
-                          //           ),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ],
-                          // ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.black.withOpacity(0.4),
+                                        borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(20),
+                                            topLeft: Radius.circular(20))),
+                                    padding:
+                                        EdgeInsets.only(left: 10, right: 10),
+                                    child: Text(
+                                      stringPage().titles[index],
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),

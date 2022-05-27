@@ -19,14 +19,25 @@ class stringPage {
   Color screencolor = Color(0xFF0C8744);
   String homename = "Namoz o'qishni o'rganish";
   String home = "";
+
+  List manfoto = ["assets/images"];
+
   List list = [
-    "assets/images/vaqtlari.png",
-    "assets/images/xatolik.jpg",
-    "assets/images/xatolik.jpg",
-    "assets/images/xatolik.jpg",
-    "assets/images/xatolik.jpg",
-    "assets/images/xatolik.jpg",
-    "assets/images/xatolik.jpg",
+    "assets/images/time.png",
+    "assets/images/duo.png",
+    "assets/images/man.png",
+    "assets/images/woman.png",
+    "assets/images/tasbeh.png",
+    "assets/images/maruza.png",
+    "assets/images/xatolik.png",
+  ];
+
+  List names=[
+    "Bomdod Namozi",
+    "Peshin Namozi",
+    "Asr\n Namozi",
+    "Shom Namozi",
+    "Xufton Namozi",
   ];
 
   List pages = [
@@ -39,11 +50,13 @@ class stringPage {
   ];
 
   List titles = [
-    "Bomdod",
-    "Peshin",
-    "Asr",
-    "Shom",
-    "Xufton",
+    "Namoz vaqtlari",
+    "Duolar",
+    "Namoz(erkaklar)",
+    "Namoz(ayollar)",
+    "Tasbeh",
+    "Ma'ruzalar",
+    "Namozdagi xatoliklar",
   ];
 
   List nomlari = [
@@ -67,8 +80,6 @@ Future _launchUrl() async {
   final Uri _url = Uri.parse('https://flutter.dev');
   if (!await launchUrl(_url)) throw 'Could not launch $_url';
 }
-
-
 
 /*
 https://i.ytimg.com/an_webp/UOBVlsZrrCI/mqdefault_6s.webp?du=3000&sqp=CKbNspQG&rs=AOn4CLAA3nPwOXFYas7Hmn9GEEB_mcE9iw

@@ -76,10 +76,10 @@ class _TasbehState extends State<Tasbeh> {
                         margin: EdgeInsets.only(left: 10),
                         child: Center(
                           child: Text(
-                            "Jami: $jami",
+                            "Jami: $jami",textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: stringPage().maincolor,
-                                fontSize: 60,
+                                fontSize: 55,
                                 fontWeight: FontWeight.w900),
                           ),
                         ),
@@ -152,7 +152,7 @@ class _TasbehState extends State<Tasbeh> {
                                 count = 0;
                               }
                             });
-                            if (count % 33 == 0 && count != 0) {
+                            if (count % 33 == 0 && count != 0 && jami % 33==0) {
                               Vibrate.vibrate();
                             }
                           },

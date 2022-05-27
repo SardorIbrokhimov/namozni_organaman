@@ -89,42 +89,47 @@ class _ForMenState extends State<ForMen> {
                           Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                    stringPage().list[index],
-                                  ),
-                                  fit: BoxFit.cover),
+                              color: Color(0xFF087232),
                             ),
 
-                            // color: Colors.teal[100 * (index % 9)],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.black.withOpacity(0.4),
-                                        borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(20),
-                                            topLeft: Radius.circular(20))),
-                                    padding:
-                                        EdgeInsets.only(left: 10, right: 10),
-                                    child: Text(
-                                      stringPage().titles[index],
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                            // color: Colors.teal[100 * (index % 9)]
+
+                            child: Center(
+                              child: Text(
+                                stringPage().names[index],
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
                               ),
-                            ],
+                            ),
                           ),
+                          // Column(
+                          //   mainAxisAlignment: MainAxisAlignment.end,
+                          //   crossAxisAlignment: CrossAxisAlignment.center,
+                          //   children: [
+                          //     Row(
+                          //       mainAxisAlignment: MainAxisAlignment.end,
+                          //       children: [
+                          //         Container(
+                          //           decoration: BoxDecoration(
+                          //               color: Colors.black.withOpacity(0.4),
+                          //               borderRadius: BorderRadius.only(
+                          //                   bottomRight: Radius.circular(20),
+                          //                   topLeft: Radius.circular(20))),
+                          //           padding:
+                          //               EdgeInsets.only(left: 10, right: 10),
+                          //           child: Text(
+                          //             stringPage().titles[index],
+                          //             style: TextStyle(
+                          //               color: Colors.white,
+                          //               fontWeight: FontWeight.bold,
+                          //             ),
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
