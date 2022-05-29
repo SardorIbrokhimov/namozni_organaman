@@ -17,11 +17,12 @@ class _MaruzalarPageState extends State<MaruzalarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: stringPage().screencolor,
       appBar: AppBar(
         backgroundColor: stringPage().maincolor,
         title: Text("Ma'ruzalar"),
         centerTitle: true,
-        elevation: 0,
+
       ),
       body: CustomScrollView(
         slivers: [
@@ -42,7 +43,7 @@ class _MaruzalarPageState extends State<MaruzalarPage> {
               crossAxisCount: 1,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
-              childAspectRatio: 2,
+              childAspectRatio: 2/1.1,
             ),
           ),
         ],
@@ -55,7 +56,7 @@ class _MaruzalarPageState extends State<MaruzalarPage> {
       child: Container(
         margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
         width: double.infinity,
-        height: MediaQuery.of(context).size.height * 0.3,
+        height: MediaQuery.of(context).size.height * 0.4,
         decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.circular(10),
@@ -66,7 +67,7 @@ class _MaruzalarPageState extends State<MaruzalarPage> {
             child: Image.network(
               imageUrl,
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.3,
+              height: MediaQuery.of(context).size.height * 0.4,
               fit: BoxFit.cover,
               frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
                 return child;

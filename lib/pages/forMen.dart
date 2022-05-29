@@ -39,7 +39,7 @@ class _ForMenState extends State<ForMen> {
                               builder: (context) => ForVideo(
                                   name: stringPage().forman[index],
                                   title: "UOBVlsZrrCI",
-                                  about: "Lorem Ipsum"),
+                                  about: stringPage().duolar),
                             ),
                           );
                         } else if (index == 1) {
@@ -49,7 +49,7 @@ class _ForMenState extends State<ForMen> {
                               builder: (context) => ForVideo(
                                   name: stringPage().forman[index],
                                   title: "KEnDKj9jo-0",
-                                  about: "Lorem Ipsum"),
+                                  about: stringPage().duolar),
                             ),
                           );
                         } else if (index == 2) {
@@ -59,7 +59,7 @@ class _ForMenState extends State<ForMen> {
                               builder: (context) => ForVideo(
                                   name: stringPage().forman[index],
                                   title: "B6RxssjqayI",
-                                  about: "Lorem Ipsum"),
+                                  about: stringPage().duolar),
                             ),
                           );
                         } else if (index == 3) {
@@ -69,7 +69,7 @@ class _ForMenState extends State<ForMen> {
                               builder: (context) => ForVideo(
                                   name: stringPage().forman[index],
                                   title: "Zvvk1-BXkkk",
-                                  about: "Lorem Ipsum"),
+                                  about: stringPage().duolar),
                             ),
                           );
                         } else if (index == 4) {
@@ -79,7 +79,7 @@ class _ForMenState extends State<ForMen> {
                               builder: (context) => ForVideo(
                                   name: stringPage().forman[index],
                                   title: "UWo-XEu_Mbo",
-                                  about: "Lorem Ipsum"),
+                                  about: stringPage().duolar),
                             ),
                           );
                         }
@@ -99,7 +99,7 @@ class _ForMenState extends State<ForMen> {
                                 stringPage().names[index],
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 34),
+                                    color: Colors.white, fontSize: 28),
                               ),
                             ),
                           ),
